@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="IRON X - Dây nhảy thể thao tay cầm gỗ dành cho cardio, boxing và luyện tập thể lực."
+    />
+    <title>IRON X | Dây nhảy thể thao</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="header-logo-row">
+        <button
+          class="mobile-menu-button"
+          id="mobileMenuButton"
+          type="button"
+          aria-label="Mở menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <a href="#home" class="brand-logo" aria-label="IRON X">
+          <span class="brand-main">IRON X</span>
+          <span class="brand-sub">ĐÁNH THỨC BẢN LĨNH THÉP</span>
+        </a>
+      </div>
+
+      <nav class="main-menu" id="mainMenu">
+        <div class="main-menu-inner">
+          <a href="#products">Sản phẩm</a>
+          <a href="#iron-x1">IRON X1</a>
+          <a href="#iron-x3">IRON X3</a>
+          <a href="#iron-x4">IRON X4</a>
+          <a href="#details">Đặc điểm</a>
+          <a href="#gallery">Video</a>
+          <a href="#contact">Liên hệ</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <video
+          id="heroVideo"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="assets/hero-poster.jpg"
+        >
+          <source src="assets/hero-video.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-shade"></div>
+        <div class="hero-copy">
+          <h1>Đánh thức bản lĩnh thép</h1>
+          <p>Một chuyển động nhỏ mở đầu cho một hành trình mạnh mẽ hơn.</p>
+          <a href="#products">Khám phá bộ sưu tập</a>
+        </div>
+        <div class="hero-controls">
+          <button id="playButton" type="button" aria-label="Tạm dừng video">
+            <span class="pause-symbol">Ⅱ</span
+            ><span class="play-symbol">▶</span>
+          </button>
+          <button
+            id="soundButton"
+            type="button"
+            aria-label="Bật âm thanh"
+            class="sound-button"
+          >
+            <!-- Loa đang tắt -->
+            <svg
+              class="sound-icon sound-off"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path d="M4 9v6h4l5 4V5L8 9H4Z" fill="currentColor" />
+
+              <path
+                d="M17 9l4 4M21 9l-4 4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+            </svg>
+
+            <!-- Loa đang bật -->
+            <svg
+              class="sound-icon sound-on"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path d="M4 9v6h4l5 4V5L8 9H4Z" fill="currentColor" />
+
+              <path
+                d="M16 9.5a4 4 0 0 1 0 5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+
+              <path
+                d="M18.5 7a7 7 0 0 1 0 10"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <section class="product-area" id="products">
+        <div class="page-container">
+          <div class="product-grid">
+            <article class="product-card">
+              <a href="#iron-x1" class="product-image">
+                <img
+                  src="assets/curated/x1-card.jpg"
+                  alt="Dây nhảy IRON X1 tay cầm gỗ sồi"
+                />
+              </a>
+              <div class="product-content">
+                <h2>IRON X1 – GỖ SỒI</h2>
+                <p>Tay cầm gỗ sồi cao cấp, dây PVC 3 mét có thể điều chỉnh.</p>
+                <a class="zalo-link" href="#">Liên hệ Zalo</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <a href="#iron-x3" class="product-image">
+                <img
+                  src="assets/curated/x3-card.jpg"
+                  alt="Dây nhảy IRON X3 tay cầm gỗ cao su"
+                />
+              </a>
+              <div class="product-content">
+                <h2>IRON X3 – GỖ CAO SU</h2>
+                <p>
+                  Tay cầm tạo hình công thái học, phù hợp tập cardio và boxing.
+                </p>
+                <a class="zalo-link" href="#">Liên hệ Zalo</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <a href="#iron-x4" class="product-image">
+                <img
+                  src="assets/curated/x4-card.jpg"
+                  alt="Dây nhảy IRON X4 tay cầm gỗ cao su"
+                />
+              </a>
+              <div class="product-content">
+                <h2>IRON X4 – GỖ CAO SU</h2>
+                <p>
+                  Thiết kế tay cầm tối giản, dễ sử dụng cho nhu cầu tập luyện
+                  hằng ngày.
+                </p>
+                <a class="zalo-link" href="#">Liên hệ Zalo</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <a href="#iron-x1" class="product-image">
+                <img
+                  src="assets/curated/x1-white.jpg"
+                  alt="IRON X1 phiên bản dây trắng"
+                />
+              </a>
+              <div class="product-content">
+                <h2>IRON X1 – DÂY TRẮNG</h2>
+                <p>
+                  Phiên bản màu sáng với tay cầm gỗ sồi đặc trưng của IRON X1.
+                </p>
+                <a class="zalo-link" href="#">Liên hệ Zalo</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <a href="#iron-x3" class="product-image">
+                <img
+                  src="assets/curated/x3-orange.jpg"
+                  alt="IRON X3 phiên bản dây cam"
+                />
+              </a>
+              <div class="product-content">
+                <h2>IRON X3 – DÂY CAM</h2>
+                <p>
+                  Màu dây nổi bật, tay cầm gỗ cao su cho cảm giác cầm chắc tay.
+                </p>
+                <a class="zalo-link" href="#">Liên hệ Zalo</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <a href="#details" class="product-image">
+                <img
+                  src="assets/curated/adjustment.jpg"
+                  alt="Cơ chế điều chỉnh dây IRON X"
+                />
+              </a>
+              <div class="product-content">
+                <h2>KHÓA ĐIỀU CHỈNH</h2>
+                <p>
+                  Điều chỉnh chiều dài dây nhanh chóng theo chiều cao người tập.
+                </p>
+                <a class="zalo-link" href="#">Liên hệ Zalo</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <a href="#details" class="product-image">
+                <img
+                  src="assets/curated/bag.jpg"
+                  alt="Túi bảo quản dây nhảy IRON X"
+                />
+              </a>
+              <div class="product-content">
+                <h2>TÚI BẢO QUẢN IRON X</h2>
+                <p>
+                  Thiết kế túi rút nhỏ gọn, thuận tiện mang dây đến mọi buổi
+                  tập.
+                </p>
+                <a class="zalo-link" href="#">Liên hệ Zalo</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <a href="#iron-x1" class="product-image">
+                <img
+                  src="assets/curated/x1-set.jpg"
+                  alt="Bộ IRON X1 kèm túi đựng"
+                />
+              </a>
+              <div class="product-content">
+                <h2>BỘ IRON X1 + TÚI ĐỰNG</h2>
+                <p>
+                  Bộ sản phẩm hoàn chỉnh, tiện lợi khi bảo quản và di chuyển.
+                </p>
+                <a class="zalo-link" href="#">Liên hệ Zalo</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="editorial-section" id="iron-x1">
+        <div class="editorial-container">
+          <header class="editorial-header">
+            <h2>IRON X1 — hoàn thiện cho nhịp tập bền bỉ</h2>
+            <p>
+              Tay cầm gỗ sồi cao cấp kết hợp dây PVC chắc chắn và linh hoạt.
+            </p>
+            <a href="#contact">Tư vấn IRON X1</a>
+          </header>
+          <div class="editorial-feature-image">
+            <img
+              src="assets/curated/x1-feature.jpg"
+              alt="IRON X1 trong không gian tập luyện"
+              loading="lazy"
+            />
+          </div>
+          <div class="small-product-row">
+            <article>
+              <img
+                src="assets/curated/x1-orange.jpg"
+                alt="IRON X1 dây cam"
+                loading="lazy"
+              />
+              <h3>IRON X1 DÂY CAM</h3>
+              <p>Phiên bản nổi bật</p>
+            </article>
+            <article>
+              <img
+                src="assets/curated/x1-white.jpg"
+                alt="IRON X1 dây trắng"
+                loading="lazy"
+              />
+              <h3>IRON X1 DÂY TRẮNG</h3>
+              <p>Phong cách tối giản</p>
+            </article>
+            <article>
+              <img
+                src="assets/curated/x1-black.jpg"
+                alt="IRON X1 dây đen"
+                loading="lazy"
+              />
+              <h3>IRON X1 DÂY ĐEN</h3>
+              <p>Mạnh mẽ và dễ phối</p>
+            </article>
+            <article>
+              <img
+                src="assets/curated/x1-set.jpg"
+                alt="Bộ IRON X1 và túi đựng"
+                loading="lazy"
+              />
+              <h3>BỘ IRON X1</h3>
+              <p>Kèm túi bảo quản</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="editorial-section" id="iron-x3">
+        <div class="editorial-container">
+          <header class="editorial-header">
+            <h2>IRON X3 — chắc tay trong từng vòng xoay</h2>
+            <p>
+              Tay cầm gỗ cao su tạo hình công thái học, phù hợp luyện tập thường
+              xuyên.
+            </p>
+            <a href="#contact">Tư vấn IRON X3</a>
+          </header>
+          <div class="editorial-feature-image">
+            <img
+              src="assets/X3BANNER.png"
+              alt="Hai phiên bản IRON X3 dây cam và dây đen"
+              loading="lazy"
+            />
+          </div>
+          <div class="small-product-row">
+            <article>
+              <img
+                src="assets/curated/x3-black.jpg"
+                alt="IRON X3 dây đen"
+                loading="lazy"
+              />
+              <h3>IRON X3 DÂY ĐEN</h3>
+              <p>Tối giản và mạnh mẽ</p>
+            </article>
+            <article>
+              <img
+                src="assets/curated/x3-orange.jpg"
+                alt="IRON X3 dây cam"
+                loading="lazy"
+              />
+              <h3>IRON X3 DÂY CAM</h3>
+              <p>Nổi bật khi tập luyện</p>
+            </article>
+            <article>
+              <img
+                src="assets/curated/x3-angle.jpg"
+                alt="Góc nghiêng IRON X3"
+                loading="lazy"
+              />
+              <h3>TAY CẦM CÔNG THÁI HỌC</h3>
+              <p>Tạo cảm giác cầm chắc</p>
+            </article>
+            <article>
+              <img
+                src="assets/curated/x3-closeup.jpg"
+                alt="Chi tiết đáy tay cầm IRON X3"
+                loading="lazy"
+              />
+              <h3>CHI TIẾT HOÀN THIỆN</h3>
+              <p>Chắc chắn trong sử dụng</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="editorial-section" id="iron-x4">
+        <div class="editorial-container">
+          <header class="editorial-header">
+            <h2>IRON X4 — tối giản để bắt đầu dễ dàng</h2>
+            <p>Tay cầm gỗ cao su dạng thẳng, cấu trúc gọn và dễ làm quen.</p>
+            <a href="#contact">Tư vấn IRON X4</a>
+          </header>
+          <div class="editorial-feature-image">
+            <img
+              src="assets/X4BANNER.png"
+              alt="Thiết kế tay cầm và tổng thể IRON X4"
+              loading="lazy"
+            />
+          </div>
+          <div class="small-product-row">
+            <article>
+              <img
+                src="assets/curated/x4-black.jpg"
+                alt="IRON X4 dây đen"
+                loading="lazy"
+              />
+              <h3>IRON X4 DÂY ĐEN</h3>
+              <p>Thiết kế cơ bản, dễ dùng</p>
+            </article>
+            <article>
+              <img
+                src="assets/curated/x4-spec.jpg"
+                alt="Thông tin sản phẩm IRON X4"
+                loading="lazy"
+              />
+              <h3>THÔNG TIN IRON X4</h3>
+              <p>Gỗ cao su, dây PVC 3 mét</p>
+            </article>
+            <article>
+              <img
+                src="assets/curated/adjustment.jpg"
+                alt="Khóa điều chỉnh IRON X4"
+                loading="lazy"
+              />
+              <h3>ĐIỀU CHỈNH ĐỘ DÀI</h3>
+              <p>Thao tác bằng khóa lục giác</p>
+            </article>
+            <article>
+              <img
+                src="assets/curated/bag.jpg"
+                alt="Túi đựng IRON X"
+                loading="lazy"
+              />
+              <h3>TÚI BẢO QUẢN</h3>
+              <p>Gọn gàng khi mang theo</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="editorial-section" id="details">
+        <div class="editorial-container">
+          <header class="editorial-header">
+            <h2>Những chi tiết tạo nên IRON X</h2>
+            <p>
+              Từng bộ phận được thiết kế để quá trình sử dụng thuận tiện và ổn
+              định hơn.
+            </p>
+            <a href="#contact">Liên hệ tư vấn</a>
+          </header>
+          <div class="editorial-feature-image">
+            <img
+              src="assets/curated/details-feature.jpg"
+              alt="Thông số cấu tạo dây nhảy IRON X"
+              loading="lazy"
+            />
+          </div>
+          <div class="small-product-row">
+            <article>
+              <img
+                src="assets/curated/handle.jpg"
+                alt="Tay cầm gỗ IRON X"
+                loading="lazy"
+              />
+              <h3>TAY CẦM GỖ</h3>
+              <p>Cầm chắc và thoải mái</p>
+            </article>
+            <article>
+              <img
+                src="assets/curated/details-adjustment.jpg"
+                alt="Vít và vòng cố định"
+                loading="lazy"
+              />
+              <h3>VÒNG CỐ ĐỊNH</h3>
+              <p>Hỗ trợ thay đổi độ dài dây</p>
+            </article>
+            <article>
+              <img
+                src="assets/curated/details-soft-contact.jpg"
+                alt="Bề mặt tiếp xúc của dây PVC"
+                loading="lazy"
+              />
+              <h3>DÂY PVC</h3>
+              <p>Bề mặt mềm và linh hoạt</p>
+            </article>
+            <article>
+              <img
+                src="assets/curated/bag.jpg"
+                alt="Túi đựng dây nhảy IRON X"
+                loading="lazy"
+              />
+              <h3>TÚI ĐỰNG</h3>
+              <p>Tiện lợi khi bảo quản</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="video-section" id="gallery">
+        <div class="page-container">
+          <header class="editorial-header">
+            <h2>IRON X trong từng chuyển động</h2>
+            <p>Nhấn vào từng khung hình để xem video thực tế.</p>
+          </header>
+          <div class="video-grid">
+            <button
+              class="video-card"
+              type="button"
+              data-video="assets/video1.mp4"
+              aria-label="Xem video IRON X 1"
+            >
+              <video
+                muted
+                playsinline
+                preload="metadata"
+                poster="assets/postervideo1.png"
+              >
+                <source src="assets/video1.mp4" type="video/mp4" />
+              </video>
+              <span class="video-card-overlay"></span
+              ><span class="video-play-button" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg
+              ></span>
+              <span class="video-card-content"><small>Xem video</small></span>
+            </button>
+            <button
+              class="video-card"
+              type="button"
+              data-video="assets/video2.mp4"
+              aria-label="Xem video IRON X 2"
+            >
+              <video
+                muted
+                playsinline
+                preload="metadata"
+                poster="assets/postervideo2.png"
+              >
+                <source src="assets/video2.mp4" type="video/mp4" />
+              </video>
+              <span class="video-card-overlay"></span
+              ><span class="video-play-button" aria-hidden="true"
+                ><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg
+              ></span>
+              <span class="video-card-content"><small>Xem video</small></span>
+            </button>
+            <button
+              class="video-card"
+              type="button"
+              data-video="assets/video3.mp4"
+              aria-label="Xem video IRON X 3"
+            >
+              <video
+                muted
+                playsinline
+                preload="metadata"
+                poster="assets/postervideo3.png"
+              >
+                <source src="assets/video3.mp4" type="video/mp4" />
+              </video>
+              <span class="video-card-overlay"></span
+              ><span class="video-play-button" aria-hidden="true"
+                ><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg
+              ></span>
+              <span class="video-card-content"><small>Xem video</small></span>
+            </button>
+            <button
+              class="video-card"
+              type="button"
+              data-video="assets/video4.mp4"
+              aria-label="Xem video IRON X 4"
+            >
+              <video
+                muted
+                playsinline
+                preload="metadata"
+                poster="assets/postervideo4.png"
+              >
+                <source src="assets/video4.mp4" type="video/mp4" />
+              </video>
+              <span class="video-card-overlay"></span
+              ><span class="video-play-button" aria-hidden="true"
+                ><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg
+              ></span>
+              <span class="video-card-content"><small>Xem video</small></span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="contact-inner">
+          <h2>Chọn dây nhảy phù hợp với bạn</h2>
+          <p>
+            Liên hệ trực tiếp để được tư vấn giữa IRON X1, IRON X3 và IRON X4.
+          </p>
+          <a href="#" class="contact-zalo zalo-link">Liên hệ qua Zalo</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-column footer-intro">
+          <a href="#home" class="footer-brand-mark" aria-label="IRON X">
+            <span>IRON X</span><small>ĐÁNH THỨC BẢN LĨNH THÉP</small>
+          </a>
+          <p>
+            Dụng cụ luyện tập dành cho những người luôn muốn vượt qua giới hạn
+            của chính mình.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h3>Sản phẩm</h3>
+          <a href="#iron-x1">IRON X1</a><a href="#iron-x3">IRON X3</a
+          ><a href="#iron-x4">IRON X4</a>
+        </div>
+        <div class="footer-column">
+          <h3>Khám phá</h3>
+          <a href="#products">Tất cả sản phẩm</a><a href="#details">Đặc điểm</a
+          ><a href="#gallery">Video</a>
+        </div>
+        <div class="footer-column">
+          <h3>Liên hệ</h3>
+          <a href="#" class="zalo-link">Zalo</a
+          ><a href="tel:0937111999">0937 111 999</a
+          ><a href="mailto:contact@ironx.vn">contact@ironx.vn</a>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="video-modal"
+      id="videoModal"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Video IRON X"
+    >
+      <div class="video-modal-backdrop" data-close-video></div>
+      <div class="video-modal-content">
+        <button
+          class="video-modal-close"
+          id="videoModalClose"
+          type="button"
+          aria-label="Đóng video"
+        >
+          ×
+        </button>
+        <video
+          id="videoModalPlayer"
+          controls
+          playsinline
+          preload="metadata"
+        ></video>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
