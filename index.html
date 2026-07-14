@@ -16,7 +16,18 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
+  <!-- FIXED ZALO BUTTON -->
+  <a
+    href="https://zalo.me/0937111999"
+    class="fixed-zalo"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Liên hệ tư vấn qua Zalo"
+  >
+    <span class="fixed-zalo-icon">Zalo</span>
 
+    <span class="fixed-zalo-label"> Liên hệ tư vấn </span>
+  </a>
   <body>
     <header class="site-header">
       <div class="header-logo-row">
@@ -31,8 +42,7 @@
         </button>
 
         <a href="#home" class="brand-logo" aria-label="IRON X">
-          <span class="brand-main">IRON X</span>
-          <span class="brand-sub">ĐÁNH THỨC BẢN LĨNH THÉP</span>
+          <img src="assets/logo.jpg" alt="Logo IRON X" width="60" />
         </a>
       </div>
 
@@ -42,6 +52,7 @@
           <a href="#iron-x1">IRON X1</a>
           <a href="#iron-x3">IRON X3</a>
           <a href="#iron-x4">IRON X4</a>
+          <a href="#athletes">Vận động viên</a>
           <a href="#details">Đặc điểm</a>
           <a href="#gallery">Video</a>
           <a href="#contact">Liên hệ</a>
@@ -257,7 +268,164 @@
           </div>
         </div>
       </section>
+      <!-- IRON X ĐỒNG HÀNH CÙNG VẬN ĐỘNG VIÊN -->
+      <section class="athlete-section" id="athletes">
+        <div class="editorial-container">
+          <header class="editorial-header athlete-header">
+            <p class="athlete-eyebrow">IRON X ATHLETES</p>
 
+            <h2>IRON X đồng hành cùng vận động viên</h2>
+
+            <p>
+              IRON X đồng hành cùng những vận động viên luôn nỗ lực vượt qua
+              giới hạn, duy trì kỷ luật và không ngừng hoàn thiện bản thân qua
+              từng buổi tập.
+            </p>
+          </header>
+
+          <!-- VIDEO LỚN -->
+          <button
+            class="athlete-featured-video"
+            type="button"
+            data-video="assets/hero-video.mp4"
+            aria-label="Xem video IRON X đồng hành cùng vận động viên"
+          >
+            <img
+              src="assets/hero-poster.jpg"
+              alt="IRON X đồng hành cùng vận động viên"
+              loading="lazy"
+            />
+
+            <span class="athlete-video-overlay"></span>
+
+            <span class="athlete-play-button" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"></path>
+              </svg>
+            </span>
+
+            <span class="athlete-featured-content">
+              <small>IRON X STORIES</small>
+
+              <strong>
+                Sức mạnh không chỉ đến từ thể chất,<br />
+                mà còn đến từ sự kiên trì.
+              </strong>
+
+              <span>Xem video</span>
+            </span>
+          </button>
+
+          <!-- DANH SÁCH VẬN ĐỘNG VIÊN -->
+          <div class="athlete-grid">
+            <!-- VẬN ĐỘNG VIÊN 01 -->
+            <article class="athlete-card">
+              <button
+                class="athlete-image"
+                type="button"
+                data-video="assets/video4.mp4"
+                aria-label="Xem video vận động viên 01"
+              >
+                <img
+                  src="assets/postervideo4.png"
+                  alt="Vận động viên sử dụng dây nhảy IRON X"
+                  loading="lazy"
+                />
+
+                <span class="athlete-image-overlay"></span>
+
+                <span class="athlete-small-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"></path>
+                  </svg>
+                </span>
+              </button>
+
+              <div class="athlete-information">
+                <p class="athlete-sport">BOXING · FITNESS</p>
+
+                <h3>Nguyễn Minh Khang</h3>
+
+                <p>
+                  Vận động viên theo đuổi bộ môn boxing chuyên nghiệp, sử dụng
+                  IRON X trong các bài tập sức bền, tốc độ chân và khả năng phản
+                  xạ.
+                </p>
+              </div>
+            </article>
+
+            <!-- VẬN ĐỘNG VIÊN 02 -->
+            <article class="athlete-card">
+              <button
+                class="athlete-image"
+                type="button"
+                data-video="assets/video2.mp4"
+                aria-label="Xem video vận động viên 02"
+              >
+                <img
+                  src="assets/postervideo2.png"
+                  alt="Vận động viên luyện tập với IRON X"
+                  loading="lazy"
+                />
+
+                <span class="athlete-image-overlay"></span>
+
+                <span class="athlete-small-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"></path>
+                  </svg>
+                </span>
+              </button>
+
+              <div class="athlete-information">
+                <p class="athlete-sport">MARTIAL ARTS · ENDURANCE</p>
+
+                <h3>Phạm Bảo Ngọc</h3>
+
+                <p>
+                  Vận động viên võ thuật sử dụng dây nhảy IRON X để nâng cao thể
+                  lực, khả năng phối hợp và duy trì nhịp vận động ổn định.
+                </p>
+              </div>
+            </article>
+
+            <!-- VẬN ĐỘNG VIÊN 03 -->
+            <article class="athlete-card">
+              <button
+                class="athlete-image"
+                type="button"
+                data-video="assets/video1.mp4"
+                aria-label="Xem video vận động viên 03"
+              >
+                <img
+                  src="assets/postervideo1.png"
+                  alt="Vận động viên thể hình cùng dây nhảy IRON X"
+                  loading="lazy"
+                />
+
+                <span class="athlete-image-overlay"></span>
+
+                <span class="athlete-small-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"></path>
+                  </svg>
+                </span>
+              </button>
+
+              <div class="athlete-information">
+                <p class="athlete-sport">FITNESS · CONDITIONING</p>
+
+                <h3>Lê Khánh Linh</h3>
+
+                <p>
+                  Vận động viên fitness kết hợp IRON X trong chương trình
+                  cardio, kiểm soát cân nặng và cải thiện sức bền toàn thân.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
       <section class="editorial-section" id="iron-x1">
         <div class="editorial-container">
           <header class="editorial-header">
@@ -592,7 +760,7 @@
       <div class="footer-container">
         <div class="footer-column footer-intro">
           <a href="#home" class="footer-brand-mark" aria-label="IRON X">
-            <span>IRON X</span><small>ĐÁNH THỨC BẢN LĨNH THÉP</small>
+            <img src="assets/logo.jpg" alt="Logo IRON X" width="60" />
           </a>
           <p>
             Dụng cụ luyện tập dành cho những người luôn muốn vượt qua giới hạn

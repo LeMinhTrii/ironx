@@ -991,6 +991,11 @@ button {
   color: var(--text-color);
   line-height: 1;
 }
+.brand-logo img {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+}
 
 .brand-main {
   font-family: Georgia, "Times New Roman", serif;
@@ -1090,4 +1095,473 @@ button {
 
 .play-control-button.is-paused .play-symbol {
   display: block;
+}
+
+/* fixx header */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 118px;
+}
+
+/* Giữ cả logo và menu khi scroll */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: var(--header-background);
+  box-shadow: 0 1px 0 rgba(17, 17, 17, 0.08);
+}
+
+.header-logo-row {
+  position: relative;
+  height: 73px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Không fixed riêng nav trên desktop */
+.main-menu {
+  position: relative;
+  height: 45px;
+  border-top: 1px solid rgba(17, 17, 17, 0.08);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.12);
+  background: var(--header-background);
+}
+@media (max-width: 768px) {
+  .main-menu {
+    position: fixed;
+    top: 66px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 66px);
+  }
+}
+
+/* ================================
+   FIXED ZALO
+================================ */
+
+.fixed-zalo {
+  position: fixed;
+  z-index: 1500;
+  bottom: 20px;
+  right: 18px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  transform: translateY(-50%);
+  color: #ffffff;
+}
+
+.fixed-zalo-icon {
+  position: relative;
+  z-index: 2;
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  background: #0068ff;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 6px 22px rgba(0, 104, 255, 0.35);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.fixed-zalo-icon::before {
+  position: absolute;
+  z-index: -1;
+  inset: -7px;
+  border: 1px solid rgba(0, 104, 255, 0.45);
+  border-radius: 50%;
+  content: "";
+  animation: zaloPulse 1.8s infinite;
+}
+
+.fixed-zalo-label {
+  position: absolute;
+  top: 50%;
+  right: 63px;
+  width: max-content;
+  padding: 9px 13px;
+  border-radius: 4px;
+  background: #111111;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(8px, -50%);
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease,
+    transform 0.25s ease;
+}
+
+.fixed-zalo:hover .fixed-zalo-icon {
+  transform: scale(1.08);
+  box-shadow: 0 9px 28px rgba(0, 104, 255, 0.46);
+}
+
+.fixed-zalo:hover .fixed-zalo-label {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, -50%);
+}
+
+@keyframes zaloPulse {
+  0% {
+    opacity: 0.8;
+    transform: scale(0.9);
+  }
+
+  70% {
+    opacity: 0;
+    transform: scale(1.35);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.35);
+  }
+}
+
+/* Mobile: chuyển xuống góc phải phía dưới */
+@media (max-width: 768px) {
+  .fixed-zalo {
+    top: auto;
+    right: 14px;
+    bottom: 18px;
+    transform: none;
+  }
+
+  .fixed-zalo-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .fixed-zalo-label {
+    display: none;
+  }
+}
+
+/* ================================
+   IRON X ATHLETES
+================================ */
+
+.athlete-section {
+  padding: 25px 0 110px;
+}
+
+.athlete-header {
+  max-width: 760px;
+  margin-bottom: 35px;
+}
+
+.athlete-eyebrow {
+  margin: 0 0 14px !important;
+  font-family: "Inter", Arial, sans-serif !important;
+  font-size: 9px !important;
+  font-style: normal !important;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.athlete-header > p:last-child {
+  max-width: 620px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* VIDEO NỔI BẬT */
+
+.athlete-featured-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 8.6;
+  display: block;
+  padding: 0;
+  border: 0;
+  background: #222222;
+  color: #ffffff;
+  text-align: left;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.athlete-featured-video > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform 1s cubic-bezier(0.2, 0.8, 0.2, 1),
+    filter 0.5s ease;
+}
+
+.athlete-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0.12) 55%,
+    transparent 82%
+  );
+}
+
+.athlete-featured-video:hover > img {
+  transform: scale(1.02);
+  filter: brightness(0.9);
+}
+
+.athlete-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  transform: translate(-50%, -50%);
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.athlete-play-button svg {
+  width: 21px;
+  height: 21px;
+  margin-left: 4px;
+  fill: #111111;
+}
+
+.athlete-featured-video:hover .athlete-play-button {
+  background: #ffffff;
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.athlete-featured-content {
+  position: absolute;
+  right: 35px;
+  bottom: 31px;
+  left: 35px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.athlete-featured-content small {
+  margin-bottom: 8px;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.17em;
+}
+
+.athlete-featured-content strong {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(29px, 3.4vw, 50px);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.athlete-featured-content > span {
+  margin-top: 17px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid currentColor;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* ATHLETE CARDS */
+
+.athlete-grid {
+  margin-top: 46px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.athlete-card {
+  min-width: 0;
+}
+
+.athlete-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  display: block;
+  padding: 0;
+  border: 0;
+  background: #e3dfd8;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.athlete-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+    filter 0.4s ease;
+}
+
+.athlete-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.35s ease;
+}
+
+.athlete-card:hover .athlete-image > img {
+  transform: scale(1.025);
+  filter: brightness(0.92);
+}
+
+.athlete-card:hover .athlete-image-overlay {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.athlete-small-play {
+  position: absolute;
+  right: 17px;
+  bottom: 17px;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.94);
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.athlete-small-play svg {
+  width: 15px;
+  height: 15px;
+  margin-left: 3px;
+  fill: #111111;
+}
+
+.athlete-card:hover .athlete-small-play {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.athlete-information {
+  padding-top: 17px;
+}
+
+.athlete-sport {
+  margin: 0 0 7px;
+  color: var(--muted-color);
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+}
+
+.athlete-information h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+}
+
+.athlete-information > p:not(.athlete-sport) {
+  max-width: 360px;
+  margin: 10px 0 13px;
+  color: var(--muted-color);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.athlete-video-link {
+  display: inline-block;
+  padding: 0 0 3px;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  background: transparent;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .athlete-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .athlete-card:last-child {
+    grid-column: 1 / -1;
+    width: calc(50% - 12px);
+    margin-inline: auto;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .athlete-section {
+    padding: 10px 0 75px;
+  }
+
+  .athlete-featured-video {
+    aspect-ratio: 4 / 5;
+  }
+
+  .athlete-featured-content {
+    right: 20px;
+    bottom: 22px;
+    left: 20px;
+  }
+
+  .athlete-featured-content strong {
+    font-size: 35px;
+  }
+
+  .athlete-play-button {
+    width: 52px;
+    height: 52px;
+  }
+
+  .athlete-grid {
+    margin-top: 30px;
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .athlete-card:last-child {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  .athlete-small-play {
+    opacity: 1;
+    transform: none;
+  }
 }
